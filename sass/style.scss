@@ -8,7 +8,9 @@ $headers-color: #eaeaea;
 $main-block-heigth: 60px;
 $bell-color: #8edafc;
 $search-heigth: 40px;
+$light-grey: #f9f9f9;
 $dark-grey: #b1b1b1;
+$li-block-heigth: 74px;
 
 // GENERAL
 
@@ -50,6 +52,10 @@ $dark-grey: #b1b1b1;
 
   .no-shrink {
     flex-shrink: 0;
+  }
+
+  .pointer {
+    cursor: pointer;
   }
 
 
@@ -109,22 +115,60 @@ $dark-grey: #b1b1b1;
 }
 
 .search {
-  width: 100%;
-  border-radius: 2px;
   overflow: hidden;
+
+  width: 100%;
+
+  border-radius: 2px;
+
   filter: drop-shadow(1px 1px 2px #e2e2e2);
   &__icon {
     padding: 2px 20px;
-    font-size: 14px;
-    color: $dark-grey;
 
+    color: $dark-grey;
     background-color: #fff;
+
+    font-size: 14px;
   }
   &__input {
     width: 100%;
+
     border: none;
     &:focus {
       outline: none;
+    }
+  }
+}
+
+.chat-prew {
+  &__li {
+    height: $li-block-heigth;
+    padding: 0 25px 0 15px;
+
+    list-style: none;
+
+    border-bottom: 1px solid #edf2f2;
+    &.active {
+      background-color: #e9ebeb;
+    }
+    &__name {
+      padding-left: 20px;
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      h6 {
+        font-size: 10px;
+        font-weight: 500;
+        color: $dark-grey;
+      }
+    }
+    &__time {
+      margin-left: auto;
+      padding-bottom: 18px;
+      font-size: 12px;
+      font-weight: 500;
+      color: $dark-grey;
     }
   }
 }
@@ -182,13 +226,13 @@ $dark-grey: #b1b1b1;
       &__search {
         height: $search-heigth;
 
-        background-color: $headers-color;
+        background-color: $light-grey;
       }
       &__chat-prew {
         overflow-x: scroll;
 
         height: 100%;
-        padding: 0 15px;
+        padding: 0;
 
         background-color: #fff;
       }

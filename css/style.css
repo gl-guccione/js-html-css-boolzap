@@ -31,6 +31,10 @@
   flex-shrink: 0;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .app__left .img {
   height: 75%;
 }
@@ -77,17 +81,17 @@
 }
 
 .search {
+  overflow: hidden;
   width: 100%;
   border-radius: 2px;
-  overflow: hidden;
   filter: drop-shadow(1px 1px 2px #e2e2e2);
 }
 
 .search__icon {
   padding: 2px 20px;
-  font-size: 14px;
   color: #b1b1b1;
   background-color: #fff;
+  font-size: 14px;
 }
 
 .search__input {
@@ -97,6 +101,40 @@
 
 .search__input:focus {
   outline: none;
+}
+
+.chat-prew__li {
+  height: 74px;
+  padding: 0 25px 0 15px;
+  list-style: none;
+  border-bottom: 1px solid #edf2f2;
+}
+
+.chat-prew__li.active {
+  background-color: #e9ebeb;
+}
+
+.chat-prew__li__name {
+  padding-left: 20px;
+}
+
+.chat-prew__li__name h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.chat-prew__li__name h6 {
+  font-size: 10px;
+  font-weight: 500;
+  color: #b1b1b1;
+}
+
+.chat-prew__li__time {
+  margin-left: auto;
+  padding-bottom: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #b1b1b1;
 }
 
 .background {
@@ -150,13 +188,13 @@
 
 .app__left__search {
   height: 40px;
-  background-color: #eaeaea;
+  background-color: #f9f9f9;
 }
 
 .app__left__chat-prew {
   overflow-x: scroll;
   height: 100%;
-  padding: 0 15px;
+  padding: 0;
   background-color: #fff;
 }
 
