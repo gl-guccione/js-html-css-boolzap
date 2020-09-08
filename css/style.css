@@ -5,6 +5,10 @@
   font-family: 'Nunito', sans-serif;
 }
 
+.d_none {
+  display: none;
+}
+
 .flex, .flex--cc, .flex--align-center, .flex--col, .flex--sp-between {
   display: flex;
 }
@@ -35,16 +39,29 @@
   cursor: pointer;
 }
 
-.app__left .img {
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 10px;
+  font-weight: 500;
+  color: #b1b1b1;
+}
+
+.app__left .img,
+.app__right__header .img {
   height: 75%;
 }
 
-.app__left .img img {
+.app__left .img img,
+.app__right__header .img img {
   height: 100%;
   border-radius: 50%;
 }
 
-.header__icons > * {
+.header-left__icons > * {
   position: relative;
   top: 3px;
   padding: 0 8px;
@@ -118,23 +135,26 @@
   padding-left: 20px;
 }
 
-.chat-prew__li__name h3 {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.chat-prew__li__name h6 {
-  font-size: 10px;
-  font-weight: 500;
-  color: #b1b1b1;
-}
-
 .chat-prew__li__time {
   margin-left: auto;
   padding-bottom: 18px;
   font-size: 10px;
   font-weight: 500;
   color: #b1b1b1;
+}
+
+.header-right__name {
+  padding-left: 15px;
+}
+
+.header-right__icons {
+  color: #b1b1b1;
+  margin-left: auto;
+}
+
+.header-right__icons > * {
+  padding: 0 8px;
+  cursor: pointer;
 }
 
 .background {
@@ -207,6 +227,7 @@
 .app__right__header {
   height: 60px;
   background-color: #eaeaea;
+  padding: 0 15px;
 }
 
 .app__right__chat {
