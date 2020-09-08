@@ -59,7 +59,7 @@
         <div class="app__left__search no-shrink flex--cc">
           <div class="search flex">
             <div class="search__icon">
-              <i class="fas fa-search"></i>
+              <i class="fas fa-search pointer"></i>
             </div>
             <input id="search_chat" class="search__input" type="text" value="" placeholder="Cerca o inizia una nuova chat">
           </div>
@@ -275,7 +275,30 @@
         <!-- /chat -->
 
         <!-- chat-input -->
-        <div class="app__right__chat-input no-shrink"></div>
+        <div class="app__right__chat-input no-shrink flex--align-center">
+          <!-- emoticon icon -->
+          <div class="chat-input__emoticon">
+            <i class="far fa-smile"></i>
+          </div>
+          <!-- /emoticon icon -->
+
+          <!-- chat-input__input -->
+          <input type="text" class="chat-input__input" value="" placeholder="Scrivi un messaggio">
+          <!-- /chat-input__input -->
+
+          <!-- send icon -->
+          <div class="chat-input__send no-shrink">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <!-- /send icon -->
+
+          <!-- microphone icon -->
+          <div class="chat-input__microphone no-shrink">
+            <i class="fas fa-microphone"></i>
+          </div>
+          <!-- /microphone icon -->
+
+        </div>
         <!-- /chat-input -->
       </div>
       <!-- /app__right -->

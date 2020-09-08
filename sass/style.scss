@@ -70,9 +70,10 @@ $li-block-heigth: 74px;
     font-weight: 600;
   }
   h6 {
+    color: $dark-grey;
+
     font-size: 10px;
     font-weight: 500;
-    color: $dark-grey;
   }
 
 
@@ -172,9 +173,11 @@ $li-block-heigth: 74px;
       &__time {
         margin-left: auto;
         padding-bottom: 18px;
+
+        color: $dark-grey;
+
         font-size: 10px;
         font-weight: 500;
-        color: $dark-grey;
       }
     }
   }
@@ -184,12 +187,47 @@ $li-block-heigth: 74px;
       padding-left: 15px;
     }
     &__icons {
-      color: $dark-grey;
       margin-left: auto;
+
+      color: $dark-grey;
       > * {
         padding: 0 8px;
+
         cursor: pointer;
       }
+    }
+  }
+
+  // _______
+
+  .chat-input {
+    &__input {
+      width: 100%;
+      padding: 10px 15px;
+
+      border: none;
+      border-radius: 7px;
+
+      font-size: 16px;
+
+      + .chat-input__send {
+        display: none;
+      }
+      &:focus {
+        outline: none;
+        + .chat-input__send {
+          display: block;
+        }
+        ~ .chat-input__microphone {
+          display: none;
+        }
+      }
+    }
+    &__send {
+      width: 70px;
+    }
+    &__microphone {
+      width: 70px;
     }
   }
 
@@ -264,10 +302,9 @@ $li-block-heigth: 74px;
       border-left: 1px solid #d6d6d6;
       &__header {
         height: $main-block-heigth;
+        padding: 0 15px;
 
         background-color: $headers-color;
-
-        padding: 0 15px;
       }
       &__chat {
         overflow-x: scroll;
@@ -281,6 +318,13 @@ $li-block-heigth: 74px;
         height: $main-block-heigth;
 
         background-color: $headers-color;
+        i {
+          padding: 0 25px;
+
+          cursor: pointer;
+
+          color: $dark-grey;
+        }
       }
     }
   }

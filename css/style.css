@@ -45,9 +45,9 @@ h3 {
 }
 
 h6 {
+  color: #b1b1b1;
   font-size: 10px;
   font-weight: 500;
-  color: #b1b1b1;
 }
 
 .app__left .img,
@@ -138,9 +138,9 @@ h6 {
 .chat-prew__li__time {
   margin-left: auto;
   padding-bottom: 18px;
+  color: #b1b1b1;
   font-size: 10px;
   font-weight: 500;
-  color: #b1b1b1;
 }
 
 .header-right__name {
@@ -148,13 +148,45 @@ h6 {
 }
 
 .header-right__icons {
-  color: #b1b1b1;
   margin-left: auto;
+  color: #b1b1b1;
 }
 
 .header-right__icons > * {
   padding: 0 8px;
   cursor: pointer;
+}
+
+.chat-input__input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+.chat-input__input + .chat-input__send {
+  display: none;
+}
+
+.chat-input__input:focus {
+  outline: none;
+}
+
+.chat-input__input:focus + .chat-input__send {
+  display: block;
+}
+
+.chat-input__input:focus ~ .chat-input__microphone {
+  display: none;
+}
+
+.chat-input__send {
+  width: 70px;
+}
+
+.chat-input__microphone {
+  width: 70px;
 }
 
 .background {
@@ -226,8 +258,8 @@ h6 {
 
 .app__right__header {
   height: 60px;
-  background-color: #eaeaea;
   padding: 0 15px;
+  background-color: #eaeaea;
 }
 
 .app__right__chat {
@@ -240,6 +272,12 @@ h6 {
 .app__right__chat-input {
   height: 60px;
   background-color: #eaeaea;
+}
+
+.app__right__chat-input i {
+  padding: 0 25px;
+  cursor: pointer;
+  color: #b1b1b1;
 }
 
 /*# sourceMappingURL=style.css.map */
