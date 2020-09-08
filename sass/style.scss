@@ -4,13 +4,19 @@
 
 $app-width: 80%;
 $app-heigth: 90vh;
+
 $headers-color: #eaeaea;
 $main-block-heigth: 60px;
 $bell-color: #8edafc;
 $search-heigth: 40px;
+
 $light-grey: #f9f9f9;
 $dark-grey: #b1b1b1;
+
 $li-block-heigth: 74px;
+
+$msg-green: #d5f9ba;
+$msg-white: #fff;
 
 // GENERAL
 
@@ -20,6 +26,10 @@ $li-block-heigth: 74px;
     padding: 0;
 
     font-family: 'Nunito', sans-serif;
+  }
+
+  .template {
+    display: none;
   }
 
 // MIX
@@ -198,7 +208,44 @@ $li-block-heigth: 74px;
     }
   }
 
-  // _______
+  .chat {
+    padding: 40px;
+    &__li {
+      position: relative;
+
+      max-width: 45%;
+      padding: 8px 12px 18px;
+
+      list-style: none;
+
+      word-break: break-all;
+
+      border-radius: 10px;
+
+      filter: drop-shadow(1px 1px 2px #cbcbcb);
+      span {
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+
+        color: $dark-grey;
+
+        font-size: 8px;
+      }
+      &--send {
+        margin-left: auto;
+
+        background-color: $msg-green;
+      }
+      &--rec {
+        margin-right: auto;
+
+        background-color: $msg-white;
+      }
+    }
+
+
+  }
 
   .chat-input {
     &__input {
