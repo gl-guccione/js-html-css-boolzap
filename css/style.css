@@ -4,13 +4,21 @@
   padding: 0;
 }
 
-.flex, .flex--cc {
+.flex, .flex--cc, .flex--col {
   display: flex;
 }
 
 .flex--cc {
   align-items: center;
   justify-content: center;
+}
+
+.flex--col {
+  flex-direction: column;
+}
+
+.no-shrink {
+  flex-shrink: 0;
 }
 
 .background {
@@ -24,13 +32,13 @@
 
 .background__top {
   width: 100%;
-  height: 20%;
+  height: 16%;
   background-color: #009688;
 }
 
 .background__bottom {
   width: 100%;
-  height: 80%;
+  height: 84%;
   background-color: #d6dbd7;
 }
 
@@ -44,13 +52,50 @@
 .app__left {
   width: 34%;
   height: 100%;
-  background: green;
+}
+
+.app__left__header {
+  height: 60px;
+  background-color: #eaeaea;
+}
+
+.app__left__bell {
+  height: 60px;
+  background-color: #8edafc;
+}
+
+.app__left__search {
+  height: 40px;
+  background-color: #eaeaea;
+}
+
+.app__left__chat-prew {
+  overflow-x: scroll;
+  height: 100%;
+  background-color: #fff;
 }
 
 .app__right {
   width: 66%;
   height: 100%;
-  background-color: red;
+  border-left: 1px solid #d6d6d6;
+}
+
+.app__right__header {
+  height: 60px;
+  background-color: #eaeaea;
+}
+
+.app__right__chat {
+  overflow-x: scroll;
+  height: 100%;
+  background-image: url(../img/mine.jpg);
+  background-position: center;
+}
+
+.app__right__chat-input {
+  height: 60px;
+  background-color: #eaeaea;
 }
 
 /*# sourceMappingURL=style.css.map */
