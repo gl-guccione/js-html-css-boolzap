@@ -41,24 +41,24 @@
 }
 
 .header__icons > * {
-  color: #b1b1b1;
-  font-size: 18px;
-  padding-left: 10px;
-  cursor: pointer;
   position: relative;
   top: 3px;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #b1b1b1;
+  font-size: 18px;
 }
 
 .bell__icon {
-  background-color: #fff;
-  border-radius: 50%;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
 }
 
 .bell__icon > * {
-  color: #8edafc;
   padding: 10px;
+  color: #8edafc;
 }
 
 .bell__text {
@@ -66,14 +66,37 @@
 }
 
 .bell__text h4 {
+  margin-bottom: -8px;
   font-size: 12px;
   font-weight: 600;
-  margin-bottom: -8px;
 }
 
 .bell__text a {
   color: #7c7c7c;
   font-size: 10px;
+}
+
+.search {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  filter: drop-shadow(1px 1px 2px #e2e2e2);
+}
+
+.search__icon {
+  padding: 2px 20px;
+  font-size: 14px;
+  color: #b1b1b1;
+  background-color: #fff;
+}
+
+.search__input {
+  width: 100%;
+  border: none;
+}
+
+.search__input:focus {
+  outline: none;
 }
 
 .background {
@@ -110,16 +133,18 @@
 }
 
 .app__left > * {
-  padding: 0 15px;
+  padding: 0 8px;
 }
 
 .app__left__header {
   height: 60px;
+  padding-right: 15px;
   background-color: #eaeaea;
 }
 
 .app__left__bell {
   height: 60px;
+  padding: 0 15px;
   background-color: #8edafc;
 }
 
@@ -131,6 +156,7 @@
 .app__left__chat-prew {
   overflow-x: scroll;
   height: 100%;
+  padding: 0 15px;
   background-color: #fff;
 }
 
