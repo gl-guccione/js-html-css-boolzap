@@ -167,7 +167,9 @@ h6 {
 
 .chat__li {
   position: relative;
+  min-width: 5ch;
   max-width: 45%;
+  margin-bottom: 15px;
   padding: 8px 12px 18px;
   list-style: none;
   word-break: break-all;
