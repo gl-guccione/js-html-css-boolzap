@@ -1,11 +1,22 @@
 // scss file
 
+// VAR
+
+$app-width: 80%;
+$app-heigth: 90vh;
+$headers-color: #eaeaea;
+$main-block-heigth: 60px;
+$bell-color: #8edafc;
+$search-heigth: 40px;
+$dark-grey: #b1b1b1;
+
 // GENERAL
 
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
   }
 
 // MIX
@@ -19,11 +30,22 @@
 
     @extend .flex;
   }
+  .flex--align-center {
+    align-items: center;
+    @extend .flex;
+  }
   .flex--col {
     flex-direction: column;
 
     @extend .flex;
   }
+  .flex--sp-between {
+    align-items: center;
+    justify-content: space-between;
+
+    @extend .flex;
+  }
+
   .no-shrink {
     flex-shrink: 0;
   }
@@ -33,7 +55,48 @@
 
 
 // ELEMENTS
+.app__left .img {
+  height: 75%;
+  img {
+    height: 100%;
 
+    border-radius: 50%;
+  }
+}
+
+.header__icons > * {
+  color: $dark-grey;
+  font-size: 18px;
+  padding-left: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+}
+
+.bell {
+  &__icon {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    > * {
+      color: $bell-color;
+      padding: 10px;
+    }
+  }
+  &__text {
+    padding-left: 10px;
+    h4 {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: -8px;
+    }
+    a {
+      color: #7c7c7c;
+      font-size: 10px;
+    }
+  }
+}
 
 // MAIN SCSS
 
@@ -61,13 +124,6 @@
   }
 
   // app
-  $app-width: 80%;
-  $app-heigth: 90vh;
-  $headers-color: #eaeaea;
-  $main-block-heigth: 60px;
-  $bell-color: #8edafc;
-  $search-heigth: 40px;
-
   .app {
     width: $app-width;
     height: $app-heigth;
@@ -77,6 +133,9 @@
     &__left {
       width: 34%;
       height: 100%;
+      > * {
+        padding: 0 15px;
+      }
       &__header {
         height: $main-block-heigth;
 

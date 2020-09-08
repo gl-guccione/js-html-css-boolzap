@@ -7,6 +7,9 @@
     <title>BoolzApp</title>
     <!-- link stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap">
     <!-- link jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
@@ -16,23 +19,69 @@
       <div class="background__top"></div>
       <div class="background__bottom"></div>
     </div>
-    <!-- background bi-color -->
+    <!-- /background bi-color -->
     <!-- main - app -->
     <main class="app flex">
-      <div class="app__left flex--col">
-        <div class="app__left__header no-shrink"></div>
-        <div class="app__left__bell no-shrink"></div>
-        <div class="app__left__search no-shrink"></div>
-        <div class="app__left__chat-prew"></div>
-      </div>
-      <div class="app__right flex--col">
-        <div class="app__right__header no-shrink"></div>
-        <div class="app__right__chat"></div>
-        <div class="app__right__chat-input no-shrink"></div>
 
+      <!-- app__left -->
+      <div class="app__left flex--col">
+        <!-- header -->
+        <div class="app__left__header no-shrink flex--sp-between">
+          <!-- img -->
+          <div class="img">
+            <img src="img/avatar_io.jpg" alt="Personal Avatar">
+          </div>
+          <!-- /img -->
+
+          <!-- icons -->
+          <div class="header__icons">
+            <i class="fas fa-circle-notch"></i>
+            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          <!-- /icons -->
+        </div>
+        <!-- /header -->
+
+        <!-- bell -->
+        <div class="app__left__bell no-shrink flex--align-center">
+          <div class="bell__icon flex--align-center">
+            <i class="fas fa-bell-slash"></i>
+          </div>
+          <div class="bell__text">
+            <h4>Ricevi notifiche di nuovi messaggi</h4>
+            <a href="#">Attiva notifiche desktop</a>
+          </div>
+        </div>
+        <!-- /bell -->
+
+        <!-- search -->
+        <div class="app__left__search no-shrink"></div>
+        <!-- /search -->
+
+        <!-- chat-prew -->
+        <div class="app__left__chat-prew"></div>
+        <!-- /chat-prew -->
       </div>
+      <!-- /app__left -->
+
+      <!-- app__right -->
+      <div class="app__right flex--col">
+        <!-- header -->
+        <div class="app__right__header no-shrink"></div>
+        <!-- /header -->
+
+        <!-- chat -->
+        <div class="app__right__chat"></div>
+        <!-- /chat -->
+
+        <!-- chat-input -->
+        <div class="app__right__chat-input no-shrink"></div>
+        <!-- /chat-input -->
+      </div>
+      <!-- /app__right -->
     </main>
-    <!-- main - app -->
+    <!-- /main - app -->
 
 
     <script src="js/script.js" charset="utf-8"></script>
