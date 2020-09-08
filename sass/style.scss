@@ -1,1 +1,77 @@
 // scss file
+
+// GENERAL
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+// MIX
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-c-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+// TYPO
+
+
+// ELEMENTS
+
+
+// MAIN SCSS
+
+  // background
+  .background {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    &__top {
+      width: 100%;
+      height: 20%;
+
+      background-color: #009688;
+    }
+    &__bottom {
+      width: 100%;
+      height: 80%;
+
+      background-color: #d6dbd7;
+    }
+  }
+
+  // app
+  $app-width: 80%;
+  $app-heigth: 90vh;
+
+  .app {
+    width: $app-width;
+    height: $app-heigth;
+    margin: ((100vh - $app-heigth) / 2) ((100% - $app-width) / 2);
+
+    background-color: #fff;
+    &__left {
+      width: 34%;
+      height: 100%;
+
+      background: green;
+    }
+    &__right {
+      width: 66%;
+      height: 100%;
+
+      background-color: red;
+    }
+  }

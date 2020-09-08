@@ -1,2 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-c-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.background__top {
+  width: 100%;
+  height: 20%;
+  background-color: #009688;
+}
+
+.background__bottom {
+  width: 100%;
+  height: 80%;
+  background-color: #d6dbd7;
+}
+
+.app {
+  width: 80%;
+  height: 90vh;
+  margin: 5vh 10%;
+  background-color: #fff;
+}
+
+.app__left {
+  width: 34%;
+  height: 100%;
+  background: green;
+}
+
+.app__right {
+  width: 66%;
+  height: 100%;
+  background-color: red;
+}
 
 /*# sourceMappingURL=style.css.map */
