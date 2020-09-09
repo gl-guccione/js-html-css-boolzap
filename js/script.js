@@ -22,10 +22,12 @@ function sendMessage() {
     clock = hours + ":" + minutes;
 
     $(".chat-input__input").val("");
+    $(".chat-input__send").addClass("d_none");
+    $(".chat-input__microphone").removeClass("d_none");
 
     templateSend.prepend(msg);
     templateSend.children("span").text(clock);
-    templateSend.appendTo("ul.chat");
+    templateSend.appendTo("ul.chat.active");
 
     var delay = randomNumber(800, 3000);
     recMessage("ok", delay);
@@ -50,7 +52,7 @@ function recMessage(text, time) {
 
     templateRec.prepend(msg);
     templateRec.children("span").text(clock);
-    templateRec.appendTo("ul.chat");
+    templateRec.appendTo("ul.chat.active");
 
   }, time);
 }
@@ -66,6 +68,38 @@ $(document).ready(
     if (e.which == 13 && $(".chat-input__input").val() != "") {
       sendMessage();
     }
-  })
+  });
+
+  document.getElementById("chat-input__input").addEventListener("input",
+    function () {
+      if (document.getElementById("chat-input__input").value == "") {
+        $(".chat-input__send").addClass("d_none");
+        $(".chat-input__microphone").removeClass("d_none");
+      } else {
+        $(".chat-input__send").removeClass("d_none");
+        $(".chat-input__microphone").addClass("d_none");
+      }
+  });
+
+  $(".chat-prew__li").click(function () {
+    $(".chat-prew__li").removeClass("active");
+    $(this).addClass("active");
+    var elementNumber = $(this).attr("data-chat");
+  });
+
+
+  document.getElementById("search_chat").addEventListener("input",
+    function () {
+      var inputValue = document.getElementById("search_chat").value;
+      inputValue = inputValue.toLowerCase();
+
+      if (inputValue != "") {
+        $(".chat-prew__li").addClass("d_none_imp");
+        $("[data-name*="+ inputValue +"]").removeClass("d_none_imp");
+
+      } else if (inputValue == "") {
+        $(".chat-prew__li").removeClass("d_none_imp");
+      }
+  });
 
 });

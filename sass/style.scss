@@ -37,6 +37,9 @@ $msg-white: #fff;
   .d_none {
     display: none;
   }
+  .d_none_imp {
+    display: none !important;
+  }
 
   .flex {
     display: flex;
@@ -209,7 +212,11 @@ $msg-white: #fff;
   }
 
   .chat {
+    display: none;
     padding: 40px;
+    &.active {
+      display: flex;
+    }
     &__li {
       position: relative;
 
@@ -258,18 +265,8 @@ $msg-white: #fff;
       border-radius: 7px;
 
       font-size: 16px;
-
-      + .chat-input__send {
-        display: none;
-      }
       &:focus {
         outline: none;
-        + .chat-input__send {
-          display: block;
-        }
-        ~ .chat-input__microphone {
-          display: none;
-        }
       }
     }
     &__send {

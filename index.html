@@ -71,7 +71,7 @@
           <!-- ul chat-prew -->
           <ul class="chat-prew">
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer active">
+            <li class="chat-prew__li flex--align-center pointer active" data-chat="0" data-name="michele">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_1.jpg" alt="Avatar Michele">
@@ -92,7 +92,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer">
+            <li class="chat-prew__li flex--align-center pointer" data-chat="1" data-name="fabio">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_2.jpg" alt="Avatar Fabio">
@@ -113,7 +113,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer">
+            <li class="chat-prew__li flex--align-center pointer" data-chat="2" data-name="samuele">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_3.jpg" alt="Avatar Samuele">
@@ -134,7 +134,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer">
+            <li class="chat-prew__li flex--align-center pointer" data-chat="3" data-name="alessandro b">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_4.jpg" alt="Avatar Alessandro B.">
@@ -155,7 +155,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer">
+            <li class="chat-prew__li flex--align-center pointer" data-chat="4" data-name="alessandro l">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_5.jpg" alt="Avatar Alessandro L.">
@@ -176,7 +176,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer">
+            <li class="chat-prew__li flex--align-center pointer" data-chat="5" data-name="claudia">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_6.jpg" alt="Avatar Claudia">
@@ -197,7 +197,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer">
+            <li class="chat-prew__li flex--align-center pointer" data-chat="6" data-name="davide">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_7.jpg" alt="Avatar Davide">
@@ -218,7 +218,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer">
+            <li class="chat-prew__li flex--align-center pointer" data-chat="7" data-name="federico">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_8.jpg" alt="Avatar Federico">
@@ -272,9 +272,14 @@
 
         <!-- chat -->
         <div class="app__right__chat">
-          <ul class="chat flex--col">
-
-          </ul>
+          <ul class="chat flex--col active" data-chat="0"></ul>
+          <ul class="chat flex--col" data-chat="1"></ul>
+          <ul class="chat flex--col" data-chat="2"></ul>
+          <ul class="chat flex--col" data-chat="3"></ul>
+          <ul class="chat flex--col" data-chat="4"></ul>
+          <ul class="chat flex--col" data-chat="5"></ul>
+          <ul class="chat flex--col" data-chat="6"></ul>
+          <ul class="chat flex--col" data-chat="7"></ul>
         </div>
         <!-- /chat -->
 
@@ -287,11 +292,11 @@
           <!-- /emoticon icon -->
 
           <!-- chat-input__input -->
-          <input type="text" class="chat-input__input" value="" placeholder="Scrivi un messaggio">
+          <input type="text" id="chat-input__input" class="chat-input__input" value="" placeholder="Scrivi un messaggio">
           <!-- /chat-input__input -->
 
           <!-- send icon -->
-          <div id="send-message" class="chat-input__send no-shrink">
+          <div id="send-message" class="chat-input__send no-shrink d_none">
             <i class="fas fa-paper-plane"></i>
           </div>
           <!-- /send icon -->

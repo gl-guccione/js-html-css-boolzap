@@ -13,6 +13,10 @@
   display: none;
 }
 
+.d_none_imp {
+  display: none !important;
+}
+
 .flex, .flex--cc, .flex--align-center, .flex--col, .flex--sp-between {
   display: flex;
 }
@@ -162,7 +166,12 @@ h6 {
 }
 
 .chat {
+  display: none;
   padding: 40px;
+}
+
+.chat.active {
+  display: flex;
 }
 
 .chat__li {
@@ -203,20 +212,8 @@ h6 {
   font-size: 16px;
 }
 
-.chat-input__input + .chat-input__send {
-  display: none;
-}
-
 .chat-input__input:focus {
   outline: none;
-}
-
-.chat-input__input:focus + .chat-input__send {
-  display: block;
-}
-
-.chat-input__input:focus ~ .chat-input__microphone {
-  display: none;
 }
 
 .chat-input__send {
