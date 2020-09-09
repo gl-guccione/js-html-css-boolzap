@@ -95,7 +95,7 @@ $(document).ready(
 
       if (inputValue != "") {
         $(".chat-prew__li").addClass("d_none_imp");
-        $("[data-name*="+ inputValue +"]").removeClass("d_none_imp");
+        $("[data-name*=" + inputValue + "]").removeClass("d_none_imp");
 
       } else if (inputValue == "") {
         $(".chat-prew__li").removeClass("d_none_imp");
