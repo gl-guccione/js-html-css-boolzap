@@ -230,13 +230,13 @@ h6 {
   display: block;
 }
 
+.chat__li span.angle:hover i.fas.fa-angle-down {
+  color: #b1b1b1;
+}
+
 .chat__li i.fas.fa-angle-down {
   padding-left: 5px;
   color: transparent;
-}
-
-.chat__li i.fas.fa-angle-down:hover {
-  color: #b1b1b1;
 }
 
 .chat__li span.time {

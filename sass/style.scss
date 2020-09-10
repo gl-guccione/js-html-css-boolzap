@@ -279,14 +279,15 @@ $msg-white: #fff;
         &:hover .dropdown-menu {
           display: block;
         }
+        &:hover i.fas.fa-angle-down {
+          color: $dark-grey;
+
+        }
       }
       i.fas.fa-angle-down {
         padding-left: 5px;
 
         color: transparent;
-        &:hover {
-          color: $dark-grey;
-        }
       }
       span.time {
         position: absolute;

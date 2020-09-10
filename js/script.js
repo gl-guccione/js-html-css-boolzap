@@ -111,6 +111,9 @@ $(document).ready(
   });
 
   // delete message with .delete <a>
-  
+  $(".chat").on("click", ".delete",
+    function () {
+      $(this).parents(".chat__li").remove();
+  });
 
 });
