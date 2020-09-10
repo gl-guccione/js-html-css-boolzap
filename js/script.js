@@ -1,5 +1,18 @@
 // functions
 
+// function that return the time in 13:01 format
+function getTime() {
+  var clock = new Date;
+  var hours = clock.getHours();
+  var minutes = clock.getMinutes();
+
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+
+  return hours + ":" + minutes;
+}
+
 // create a function that generate a random number => randomNumber(min, max)
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -8,17 +21,9 @@ function randomNumber(min, max) {
 // create a function that send a message in the chat with the value of the input => sendMessage()
 function sendMessage() {
   if ($(".chat-input__input").val() != "") {
-    var clock = new Date;
-    var hours = clock.getHours();
-    var minutes = clock.getMinutes();
-
-    if (minutes < 10) {
-      minutes = "0" + minutes;
-    }
-
     var templateSend = $("ul.template .chat__li--send").clone();
     var msg = $(".chat-input__input").val();
-    clock = hours + ":" + minutes;
+    clock = getTime();
 
     $(".chat-input__input").val("");
     $(".chat-input__send").addClass("d_none");
@@ -30,6 +35,7 @@ function sendMessage() {
 
     var index = $("ul.chat.active").attr("data-chat");
 
+
     var delay = randomNumber(800, 3000);
     recMessage("ok", delay, index);
   }
@@ -38,17 +44,9 @@ function sendMessage() {
 // create a function that receive a message in the chat with "text" after "time" in ms => recMessage("text", time)
 function recMessage(text, time, index) {
   setTimeout(function() {
-    var clock = new Date;
-    var hours = clock.getHours();
-    var minutes = clock.getMinutes();
-
-    if (minutes < 10) {
-      minutes = "0" + minutes;
-    }
-
     var templateRec = $("ul.template .chat__li--rec").clone();
     var msg = text;
-    clock = hours + ":" + minutes;
+    clock = getTime();
 
 
     templateRec.prepend(msg);
