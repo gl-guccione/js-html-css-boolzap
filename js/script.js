@@ -56,6 +56,7 @@ function recMessage(text, time, index) {
     templateRec.appendTo("ul.chat[data-chat=" + index + "]");
 
     $(".header-right__name[data-chat=" + index + "] h6").text("Ultimo accesso oggi alle " + clock);
+    $(".chat-prew__li[data-prew=" + index + "] .chat-prew__li__time span").text(clock);
 
   }, time);
 }
