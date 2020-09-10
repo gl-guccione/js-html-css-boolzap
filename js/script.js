@@ -25,16 +25,18 @@ function sendMessage() {
     $(".chat-input__microphone").removeClass("d_none");
 
     templateSend.prepend(msg);
-    templateSend.children("span").text(clock);
+    templateSend.children("span.time").text(clock);
     templateSend.appendTo("ul.chat.active");
 
+    var index = $("ul.chat.active").attr("data-chat");
+
     var delay = randomNumber(800, 3000);
-    recMessage("ok", delay);
+    recMessage("ok", delay, index);
   }
 }
 
 // create a function that receive a message in the chat with "text" after "time" in ms => recMessage("text", time)
-function recMessage(text, time) {
+function recMessage(text, time, index) {
   setTimeout(function() {
     var clock = new Date;
     var hours = clock.getHours();
@@ -50,8 +52,8 @@ function recMessage(text, time) {
 
 
     templateRec.prepend(msg);
-    templateRec.children("span").text(clock);
-    templateRec.appendTo("ul.chat.active");
+    templateRec.children("span.time").text(clock);
+    templateRec.appendTo("ul.chat[data-chat=" + index + "]");
 
   }, time);
 }
@@ -82,11 +84,15 @@ $(document).ready(
       }
   });
 
-  // selecting the right chat (wip)
+  // selecting the right chat
   $(".chat-prew__li").click(function () {
     $(".chat-prew__li").removeClass("active");
     $(this).addClass("active");
-    var elementNumber = $(this).attr("data-chat");
+    var elementNumber = $(this).attr("data-prew");
+
+    $("[data-chat].active").removeClass("active");
+    $("[data-chat=" + elementNumber + "]").addClass("active");
+
   });
 
   // search in the chat list function
@@ -103,5 +109,8 @@ $(document).ready(
         $(".chat-prew__li").removeClass("d_none_imp");
       }
   });
+
+  // delete message with .delete <a>
+  
 
 });

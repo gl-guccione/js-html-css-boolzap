@@ -71,7 +71,7 @@
           <!-- ul chat-prew -->
           <ul class="chat-prew">
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer active" data-chat="0" data-name="michele">
+            <li class="chat-prew__li flex--align-center pointer active" data-prew="0" data-name="michele">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_1.jpg" alt="Avatar Michele">
@@ -92,7 +92,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer" data-chat="1" data-name="fabio">
+            <li class="chat-prew__li flex--align-center pointer" data-prew="1" data-name="fabio">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_2.jpg" alt="Avatar Fabio">
@@ -113,7 +113,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer" data-chat="2" data-name="samuele">
+            <li class="chat-prew__li flex--align-center pointer" data-prew="2" data-name="samuele">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_3.jpg" alt="Avatar Samuele">
@@ -134,7 +134,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer" data-chat="3" data-name="alessandro b">
+            <li class="chat-prew__li flex--align-center pointer" data-prew="3" data-name="alessandro b">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_4.jpg" alt="Avatar Alessandro B.">
@@ -155,7 +155,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer" data-chat="4" data-name="alessandro l">
+            <li class="chat-prew__li flex--align-center pointer" data-prew="4" data-name="alessandro l">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_5.jpg" alt="Avatar Alessandro L.">
@@ -176,7 +176,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer" data-chat="5" data-name="claudia">
+            <li class="chat-prew__li flex--align-center pointer" data-prew="5" data-name="claudia">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_6.jpg" alt="Avatar Claudia">
@@ -197,7 +197,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer" data-chat="6" data-name="davide">
+            <li class="chat-prew__li flex--align-center pointer" data-prew="6" data-name="davide">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_7.jpg" alt="Avatar Davide">
@@ -218,7 +218,7 @@
             <!-- /li - element -->
 
             <!-- li - element -->
-            <li class="chat-prew__li flex--align-center pointer" data-chat="7" data-name="federico">
+            <li class="chat-prew__li flex--align-center pointer" data-prew="7" data-name="federico">
               <!-- img -->
               <div class="img">
                 <img src="img/avatar_8.jpg" alt="Avatar Federico">
@@ -251,12 +251,47 @@
         <div class="app__right__header no-shrink flex--align-center">
           <!-- img -->
           <div class="img">
-            <img src="img/avatar_1.jpg" alt="Avatar Michele">
+            <img src="img/avatar_1.jpg" class="img__picture active" alt="Avatar Michele "data-chat="0">
+            <img src="img/avatar_2.jpg" class="img__picture" alt="Avatar Fabio "data-chat="1">
+            <img src="img/avatar_3.jpg" class="img__picture" alt="Avatar Samuele "data-chat="2">
+            <img src="img/avatar_4.jpg" class="img__picture" alt="Avatar Alessandro B. "data-chat="3">
+            <img src="img/avatar_5.jpg" class="img__picture" alt="Avatar Alessandro L. "data-chat="4">
+            <img src="img/avatar_6.jpg" class="img__picture" alt="Avatar Claudia "data-chat="5">
+            <img src="img/avatar_7.jpg" class="img__picture" alt="Avatar Davide "data-chat="6">
+            <img src="img/avatar_8.jpg" class="img__picture" alt="Avatar Federico "data-chat="7">
           </div>
           <!-- /img -->
           <!-- heading -->
-          <div class="header-right__name">
+          <div class="header-right__name active" data-chat="0">
             <h3>Michele</h3>
+            <h6>Ultimo accesso oggi alle 15.40</h6>
+          </div>
+          <div class="header-right__name" data-chat="1">
+            <h3>Fabio</h3>
+            <h6>Ultimo accesso oggi alle 15.40</h6>
+          </div>
+          <div class="header-right__name" data-chat="2">
+            <h3>Samuele</h3>
+            <h6>Ultimo accesso oggi alle 15.40</h6>
+          </div>
+          <div class="header-right__name" data-chat="3">
+            <h3>Alessandro B.</h3>
+            <h6>Ultimo accesso oggi alle 15.40</h6>
+          </div>
+          <div class="header-right__name" data-chat="4">
+            <h3>Alessandro L.</h3>
+            <h6>Ultimo accesso oggi alle 15.40</h6>
+          </div>
+          <div class="header-right__name" data-chat="5">
+            <h3>Claudia</h3>
+            <h6>Ultimo accesso oggi alle 15.40</h6>
+          </div>
+          <div class="header-right__name" data-chat="6">
+            <h3>Davide</h3>
+            <h6>Ultimo accesso oggi alle 15.40</h6>
+          </div>
+          <div class="header-right__name" data-chat="7">
+            <h3>Federico</h3>
             <h6>Ultimo accesso oggi alle 15.40</h6>
           </div>
           <!-- /heading -->
@@ -316,8 +351,30 @@
 
     <!-- template -->
     <ul class="template">
-      <li class="chat__li chat__li--send"> <span></span></li>
-      <li class="chat__li chat__li--rec"> <span></span></li>
+      <li class="chat__li chat__li--send">
+        <span class="angle">
+          <i class="fas fa-angle-down"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="#">Info messaggio</a></li>
+              <li><a href="#" class="delete">Cancella messaggio</a></li>
+            </ul>
+          </div>
+        </span>
+        <span class="time"></span>
+      </li>
+      <li class="chat__li chat__li--rec">
+        <span class="angle">
+          <i class="fas fa-angle-down"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="#">Info messaggio</a></li>
+              <li><a href="#" class="delete">Cancella messaggio</a></li>
+            </ul>
+          </div>
+        </span>
+        <span class="time"></span>
+      </li>
     </ul>
     <!-- /template -->
 

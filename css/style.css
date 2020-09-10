@@ -152,7 +152,12 @@ h6 {
 }
 
 .header-right__name {
+  display: none;
   padding-left: 15px;
+}
+
+.header-right__name.active {
+  display: block;
 }
 
 .header-right__icons {
@@ -163,6 +168,14 @@ h6 {
 .header-right__icons > * {
   padding: 0 8px;
   cursor: pointer;
+}
+
+.img__picture {
+  display: none;
+}
+
+.img__picture.active {
+  display: block;
 }
 
 .chat {
@@ -186,7 +199,47 @@ h6 {
   filter: drop-shadow(1px 1px 2px #cbcbcb);
 }
 
-.chat__li span {
+.chat__li span.angle {
+  position: relative;
+}
+
+.chat__li span.angle .dropdown-menu {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  display: none;
+  padding-top: 25px;
+  filter: drop-shadow(1px 1px 2px #cbcbcb);
+}
+
+.chat__li span.angle .dropdown-menu li {
+  padding: 8px 15px;
+  list-style: none;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #fff;
+}
+
+.chat__li span.angle .dropdown-menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+}
+
+.chat__li span.angle:hover .dropdown-menu {
+  display: block;
+}
+
+.chat__li i.fas.fa-angle-down {
+  padding-left: 5px;
+  color: transparent;
+}
+
+.chat__li i.fas.fa-angle-down:hover {
+  color: #b1b1b1;
+}
+
+.chat__li span.time {
   position: absolute;
   right: 10px;
   bottom: 5px;
@@ -199,9 +252,17 @@ h6 {
   background-color: #d5f9ba;
 }
 
+.chat__li--send .dropdown-menu {
+  right: -7px;
+}
+
 .chat__li--rec {
   margin-right: auto;
   background-color: #fff;
+}
+
+.chat__li--rec .dropdown-menu {
+  left: -30px;
 }
 
 .chat-input__input {
