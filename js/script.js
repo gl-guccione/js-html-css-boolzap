@@ -35,6 +35,8 @@ function sendMessage() {
 
     var index = $("ul.chat.active").attr("data-chat");
 
+    $(".header-right__name[data-chat=" + index + "] h6").text("sta scrivendo...");
+
 
     var delay = randomNumber(800, 3000);
     recMessage("ok", delay, index);
@@ -52,6 +54,8 @@ function recMessage(text, time, index) {
     templateRec.prepend(msg);
     templateRec.children("span.time").text(clock);
     templateRec.appendTo("ul.chat[data-chat=" + index + "]");
+
+    $(".header-right__name[data-chat=" + index + "] h6").text("Ultimo accesso oggi alle " + clock);
 
   }, time);
 }
