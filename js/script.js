@@ -16,7 +16,6 @@ function sendMessage() {
       minutes = "0" + minutes;
     }
 
-
     var templateSend = $("ul.template .chat__li--send").clone();
     var msg = $(".chat-input__input").val();
     clock = hours + ":" + minutes;
@@ -62,6 +61,7 @@ function recMessage(text, time) {
 $(document).ready(
   function () {
 
+  // function sendMessage() when the user click button "send" or press "enter" key
   $("#send-message").click(sendMessage);
 
   $(".chat-input__input").keyup(function(e) {
@@ -70,6 +70,7 @@ $(document).ready(
     }
   });
 
+  // showing the "send" button only when the input is != ""
   document.getElementById("chat-input__input").addEventListener("input",
     function () {
       if (document.getElementById("chat-input__input").value == "") {
@@ -81,13 +82,14 @@ $(document).ready(
       }
   });
 
+  // selecting the right chat (wip)
   $(".chat-prew__li").click(function () {
     $(".chat-prew__li").removeClass("active");
     $(this).addClass("active");
     var elementNumber = $(this).attr("data-chat");
   });
 
-
+  // search in the chat list function
   document.getElementById("search_chat").addEventListener("input",
     function () {
       var inputValue = document.getElementById("search_chat").value;
