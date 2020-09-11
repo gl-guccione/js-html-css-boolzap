@@ -41,6 +41,10 @@ $msg-white: #fff;
     display: none !important;
   }
 
+  .z-index {
+    z-index: 10;
+  }
+
   .flex {
     display: flex;
   }
@@ -247,14 +251,12 @@ $msg-white: #fff;
       filter: drop-shadow(1px 1px 2px #cbcbcb);
       span.angle {
         position: relative;
+        cursor: pointer;
         .dropdown-menu {
           position: absolute;
-          z-index: 2;
-          top: 14px;
-
-          display: none;
-
-          padding-top: 25px;
+          top: 35px;
+          background-color: #fff;
+          border-radius: 5px;
 
           filter: drop-shadow(1px 1px 2px #cbcbcb);
 
@@ -265,8 +267,6 @@ $msg-white: #fff;
 
             text-align: center;
             white-space: nowrap;
-
-            background-color: #fff;
             a {
               text-decoration: none;
 
@@ -275,9 +275,6 @@ $msg-white: #fff;
               font-size: 13px;
             }
           }
-        }
-        &:hover .dropdown-menu {
-          display: block;
         }
         &:hover i.fas.fa-angle-down {
           color: $dark-grey;

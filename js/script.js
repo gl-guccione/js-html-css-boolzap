@@ -35,7 +35,13 @@ function sendMessage() {
 
     var index = $("ul.chat.active").attr("data-chat");
 
+    $(".chat-prew__li[data-prew=" + index + "] .chat-prew__li__name h6").text(msg);
     $(".header-right__name[data-chat=" + index + "] h6").text("sta scrivendo...");
+
+    // $(".app__right__chat").scrollTop(10000);
+
+    var heightChat = $(".chat.active").height();
+    $(".app__right__chat").animate({scrollTop: heightChat}, 900);
 
 
     var delay = randomNumber(800, 3000);
@@ -56,7 +62,11 @@ function recMessage(text, time, index) {
     templateRec.appendTo("ul.chat[data-chat=" + index + "]");
 
     $(".header-right__name[data-chat=" + index + "] h6").text("Ultimo accesso oggi alle " + clock);
+    $(".chat-prew__li[data-prew=" + index + "] .chat-prew__li__name h6").text(text);
     $(".chat-prew__li[data-prew=" + index + "] .chat-prew__li__time span").text(clock);
+
+    var heightChat = $(".chat.active").height();
+    $(".app__right__chat").animate({scrollTop: heightChat}, 900);
 
   }, time);
 }
@@ -116,7 +126,29 @@ $(document).ready(
   // delete message with .delete <a>
   $(".chat").on("click", ".delete",
     function () {
+      var index = $(this).parents("ul.chat.active").attr("data-chat");
+
       $(this).parents(".chat__li").remove();
+
+      var lastMessage = $("ul.chat[data-chat=" + index + "] .chat__li:last-child").text();
+
+  });
+
+  // open/close dropdown-menu
+  $(".chat").on("click", ".angle",
+    function () {
+      var notVisible = $(this).find(".dropdown-menu").hasClass("d_none");
+
+      $(".dropdown-menu").addClass("d_none");
+      $(".chat__li").removeClass("z-index");
+
+      if (notVisible) {
+        $(this).find(".dropdown-menu").removeClass("d_none");
+        $(this).parents(".chat__li").addClass("z-index");
+      } else {
+        $(this).find(".dropdown-menu").addClass("d_none");
+        $(this).parents(".chat__li").removeClass("z-index");
+      }
   });
 
 });
