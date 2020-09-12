@@ -1,5 +1,13 @@
 // functions
 
+// function that scroll the chat all the way to the bottom
+// accept (time)
+
+function scrollToBottom(time) {
+  var heightChat = $(".chat.active").height();
+  $(".app__right__chat").animate({scrollTop: heightChat}, time);
+}
+
 // function that return the time in 13:01 format
 function getTime() {
   var clock = new Date;
@@ -38,11 +46,7 @@ function sendMessage() {
     $(".chat-prew__li[data-prew=" + index + "] .chat-prew__li__name h6").text(msg);
     $(".header-right__name[data-chat=" + index + "] h6").text("sta scrivendo...");
 
-    // $(".app__right__chat").scrollTop(10000);
-
-    var heightChat = $(".chat.active").height();
-    $(".app__right__chat").animate({scrollTop: heightChat}, 900);
-
+    scrollToBottom(900);
 
     var delay = randomNumber(800, 3000);
     recMessage("ok", delay, index);
@@ -65,8 +69,7 @@ function recMessage(text, time, index) {
     $(".chat-prew__li[data-prew=" + index + "] .chat-prew__li__name h6").text(text);
     $(".chat-prew__li[data-prew=" + index + "] .chat-prew__li__time span").text(clock);
 
-    var heightChat = $(".chat.active").height();
-    $(".app__right__chat").animate({scrollTop: heightChat}, 900);
+    scrollToBottom(900);
 
   }, time);
 }
