@@ -154,4 +154,30 @@ $(document).ready(
       }
   });
 
+  // .to-bottom => click
+  $(".to-bottom").click(function () {
+    scrollToBottom();
+  });
+
+  // event scroll => if scroll is not all the way down, the button .to-bottom appear
+  $(".app__right__chat").scroll(function () {
+
+    var heightChatActive = $(".chat.active").height();
+    heightChatActive += 80;
+
+    var heightChatRight = $(".app__right__chat").height();
+
+    var maxScroll = heightChatActive - heightChatRight;
+
+    var scrollState = $(".app__right__chat").scrollTop();
+
+    if (scrollState < (maxScroll - 25)) {
+      $(".to-bottom").removeClass("d_none");
+    } else {
+      $(".to-bottom").addClass("d_none");
+    }
+  });
+
+
+
 });

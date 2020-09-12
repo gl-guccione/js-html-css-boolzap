@@ -288,8 +288,19 @@ h6 {
   position: fixed;
   right: calc(10% + 40px);
   bottom: calc(5vh + 80px);
-  font-size: 26px;
+  background-color: #fff;
   cursor: pointer;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 51px;
+  filter: drop-shadow(1px 1px 2px #797979);
+}
+
+.to-bottom i.fas.fa-chevron-down {
+  color: #b1b1b1;
+  font-size: 18px;
 }
 
 .background {
