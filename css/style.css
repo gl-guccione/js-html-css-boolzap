@@ -211,8 +211,8 @@ h6 {
 .chat__li span.angle .dropdown-menu {
   position: absolute;
   top: 35px;
-  background-color: #fff;
   border-radius: 5px;
+  background-color: #fff;
   filter: drop-shadow(1px 1px 2px #cbcbcb);
 }
 
@@ -282,6 +282,14 @@ h6 {
 
 .chat-input__microphone {
   width: 70px;
+}
+
+.to-bottom {
+  position: fixed;
+  right: calc(10% + 40px);
+  bottom: calc(5vh + 80px);
+  font-size: 26px;
+  cursor: pointer;
 }
 
 .background {
@@ -358,6 +366,7 @@ h6 {
 }
 
 .app__right__chat {
+  position: relative;
   overflow-x: scroll;
   height: 100%;
   background-image: url(../img/mine.jpg);
