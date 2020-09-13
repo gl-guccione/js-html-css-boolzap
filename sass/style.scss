@@ -45,6 +45,10 @@ $msg-white: #fff;
     z-index: 10;
   }
 
+  .word-brake {
+    word-break: break-all;
+  }
+
   .flex {
     display: flex;
   }
@@ -238,13 +242,11 @@ $msg-white: #fff;
       position: relative;
 
       min-width: 5ch;
-      max-width: 45%;
+      max-width: 35ch;
       margin-bottom: 15px;
       padding: 8px 12px 18px;
 
       list-style: none;
-
-      word-break: break-all;
 
       border-radius: 10px;
 

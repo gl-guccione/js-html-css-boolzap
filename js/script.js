@@ -1,5 +1,27 @@
 // functions
 
+// function that return true if the (word) length is > of (length)
+
+function isLonger(word, length) {
+  var longerWord = 0;
+
+  for (var i = 0; i < word.length; i++) {
+
+    if (word[i] != " ") {
+      longerWord++;
+
+      if (longerWord > length) {
+        return true;
+      }
+    } else if (word[i] == " ") {
+      longerWord = 0;
+    }
+
+  }
+
+  return false;
+}
+
 // function that scroll the chat all the way to the bottom
 // accept (time)
 
@@ -36,6 +58,10 @@ function sendMessage() {
     $(".chat-input__input").val("");
     $(".chat-input__send").addClass("d_none");
     $(".chat-input__microphone").removeClass("d_none");
+
+    if (isLonger(msg, 35)) {
+      templateSend.addClass("word-brake");
+    }
 
     templateSend.prepend(msg);
     templateSend.children("span.time").text(clock);
